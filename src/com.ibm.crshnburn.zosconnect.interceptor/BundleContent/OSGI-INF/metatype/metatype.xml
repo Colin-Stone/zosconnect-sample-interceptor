@@ -18,4 +18,12 @@
     <Designate factoryPid="com.ibm.crshnburn.zosconnect.allpointsinterceptor">
         <Object ocdref="com.ibm.crshnburn.zosconnect.allpointsinterceptor" />
     </Designate>
+    
+    <OCD id="com.ibm.crshnburn.zosconnect.interceptor.requester" ibm:alias="interceptorRequester" name="interceptorRequester" description="Sample z/OS Connect Interceptor for API Requester" ibm:objectClass="com.ibm.zosconnect.interceptorType">
+        <AD id="sequence" required="false" type="Integer" default="0" min="0" max="2147483647" name="Sequence" description="The sequence in which this interceptor should be processed with respect to other configured interceptors"/>
+    </OCD>
+
+    <Designate factoryPid="com.ibm.crshnburn.zosconnect.interceptor.requester">
+        <Object ocdref="com.ibm.crshnburn.zosconnect.interceptor.requester" />
+    </Designate>
 </metatype:MetaData>
